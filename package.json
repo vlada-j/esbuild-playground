@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "esbuild": "^0.12.16"
+  },
+  "scripts": {
+    "build-browser": "esbuild src/Tween/Index.ts --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --format=iife --global-name=TWEEN --outfile=dist/tween.js",
+    "build-node": "esbuild src/Server/main.ts --bundle --platform=node --target=node10.4 --outfile=dist/server.js"
+  }
+}
